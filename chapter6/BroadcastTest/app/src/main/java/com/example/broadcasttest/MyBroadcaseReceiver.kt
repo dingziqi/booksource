@@ -9,5 +9,6 @@ class MyBroadcaseReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         Toast.makeText(context, "received", Toast.LENGTH_LONG).show()
+        abortBroadcast()
     }
 }
