@@ -12,10 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BroadcastTest">
         <receiver
+            android:name=".AnotherBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.broadcasttest.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+        <receiver
             android:name=".MyBroadcaseReceiver"
             android:enabled="true"
             android:exported="true">
-            <intent-filter><action android:name="com.example.broadcasttest.MY_BROADCAST"></action></intent-filter>
+            <intent-filter>
+                <action android:name="com.example.broadcasttest.MY_BROADCAST" />
+            </intent-filter>
         </receiver>
         <receiver
             android:name=".BootCompleteReceiver"
